@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Copy from '../icons/Copy.astro';
+---
+
+<Layout title="Astro">
+	<main class="max-w-5xl mx-auto pb-7">
+		<div class="flex flex-col items-center px-4">
+			<h1 class="font-bold text-4xl text-center md:text-[3.5rem] tracking-tighter pt-10">¡Gracias por <span class="tracking-tight inline  from-[#fb9d21] to-[#ff7300] bg-clip-text text-transparent bg-gradient-to-b">confiar</span> en nosotros!</h1>
+			<h3 class="text-base md:text-xl pt-8">Si querés pagar por otro medio, no dudes en contactarnos.</h3>
+
+			<div class="md:pt-16 pt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="bg-[#fffbfb] flex flex-col py-5 items-center rounded-3xl">
+						<h2 class="text-2xl md:text-3xl font-bold pt-4">Datos de la cuenta</h2>
+						<p class="text-lg">Banco de la prov. de Cba.</p> 
+						<div class="flex flex-col justify-center pt-10 gap-y-6">
+							<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">Número de cuenta:</span> CC $ 441 0002720104</p>
+							<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">Titular:</span> Jorge/Franco/Diego Novara</p>
+							<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">CUIT:</span> 20-34669336-4</p>
+							<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">Alias:</span> ESTUDIONOVARA</p>
+							<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">CBU:</span> 0200441301000002720147</p>
+						</div>
+						<div class="flex gap-4">
+							<button id="copyAliasBtn" class="flex items-center gap-x-2 font-medium bg-[#fce7e7] hover:bg-[#fce0e0] px-4 py-2 rounded-xl mt-4">
+								<Copy />
+								Copiar Alias
+							</button>
+							<button id="copyCBUBtn" class="flex items-center gap-x-2 font-medium bg-[#fce7e7] hover:bg-[#fce0e0] px-4 py-2 rounded-xl mt-4">
+								<Copy />
+								Copiar CBU
+							</button>
+						</div>
+				</div>
+				<div class="space-y-6">
+					
+					<div class="bg-[#fffbfb] rounded-3xl flex flex-col p-4 md:p-6 space-y-4 md:space-y-6">
+						<div class="flex flex-col md:flex-col items-center pt-3 justify-between">
+							<img src="/mercado-pago-black.svg" class="pb-4 select-none" draggable="false" width="250" alt="">
+						</div>
+
+						<div class="flex flex-col justify-center items-center">
+							<div class="flex flex-col justify-start gap-y-6">
+								<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">Titular:</span> Franco Novara</p>
+								<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">Alias:</span> estudionovara.mp</p>
+								<p class="text-sm md:text-base"><span class="text-base md:text-lg font-semibold">CVU:</span> 0000003100008744584112</p>
+							</div>
+							<div class="flex gap-4 mt-9">
+								<button id="copyAliasMercadoPagoBtn" class="flex items-center gap-x-2 font-medium bg-[#fce7e7] hover:bg-[#fce0e0] px-4 py-2 rounded-xl">
+									<Copy />
+									Copiar Alias
+								</button>
+								<button id="copyCVUBtn" class="flex items-center gap-x-2 font-medium bg-[#fce7e7] hover:bg-[#fce0e0] px-4 py-2 rounded-xl">
+									<Copy />
+									Copiar CVU
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flex-col md:flex-row gap-6">
+						<a href="https://api.whatsapp.com/send?phone=5493564651485" target="_blank" rel="noopener" class="bg-[#00E676] hover:scale-105 duration-300 transition cursor-pointer flex items-center justify-center gap-x-4 rounded-3xl px-10 py-4">
+							<img src="/whatsapp.svg" class="" width="50" alt="">
+							<p class="text-xl font-semibold text-white">Whatsapp</p>
+						</a>
+						<a href="mailto:administracion@estudionovara.com" target="_blank" rel="noopener" class="bg-[#fff] hover:scale-105 duration-300 transition cursor-pointer flex items-center justify-center gap-x-4 rounded-3xl px-10 py-4">
+							<img src="/gmail.svg" width="50" alt="">
+							<p class="text-xl font-semibold ">Gmail</p>
+						</a>
+					</div>
+				</div>
+				<div class="col-span-1 md:col-span-2 bg-[#fffbfb] rounded-3xl p-1 flex flex-col gap-y-3 md:flex-row justify-between items-center">
+					<h3 class="text-xl px-4 md:text-2xl font-bold">Informar transferencia</h3>
+					<div class="grid grid-cols-10 items-center bg-[#fffbfb] rounded-[16px] p-2 z-20">
+						<div class="col-span-8">
+							<input type="text" placeholder="Nombre y apellido" class="rounded-full px-4 border-none font-medium focus:outline-none bg-[#fffbfb] placeholder:text-[#3f3f3f] text-[#3f3f3f] placeholder:md:text-base placeholder:text-sm placeholder:bg-[#fffbfb]">
+						</div>
+						<div class="col-span-2">
+							<button class="bg-[#fb9d21] hover:bg-[#feb14b] duration-500 font-semibold text-white rounded-[12px] py-2 px-4 text-sm md:text-base">Enviar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const copyAliasBtn = document.getElementById("copyAliasBtn");
+			const copyCBUBtn = document.getElementById("copyCBUBtn");
+			const copyCVUBtn = document.getElementById("copyCVUBtn");
+			const copyAliasMercadoPagoBtn = document.getElementById("copyAliasMercadoPagoBtn");
+			
+			function revertBtn(btn: HTMLElement, originalText: string) {
+				setTimeout(() => {
+					btn.innerHTML = originalText;
+				}, 2000);
+			}
+
+			if (copyAliasBtn) {
+				copyAliasBtn.addEventListener("click", function() {
+					const alias = "ESTUDIONOVARA";
+					const originalText = copyAliasBtn.innerHTML;
+					navigator.clipboard.writeText(alias).then(() => {
+						copyAliasBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M17.707 4.293a1 1 0 010 1.414l-10 10a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L7 13.086l9.293-9.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Copiado';
+						revertBtn(copyAliasBtn, originalText);
+					}).catch(err => {
+						console.error('Error al copiar el alias', err);
+					});
+				});
+			} else {
+				console.error("El botón copyAliasBtn no se encontró");
+			}
+
+			if (copyCBUBtn) {
+				copyCBUBtn.addEventListener("click", function() {
+					const cbu = "0200441301000002720147";
+					const originalText = copyCBUBtn.innerHTML;
+					navigator.clipboard.writeText(cbu).then(() => {
+						copyCBUBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M17.707 4.293a1 1 0 010 1.414l-10 10a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L7 13.086l9.293-9.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Copiado';
+						revertBtn(copyCBUBtn, originalText);
+					}).catch(err => {
+						console.error('Error al copiar el CBU', err);
+					});
+				});
+			} else {
+				console.error("El botón copyCBUBtn no se encontró");
+			}
+
+			if (copyCVUBtn) {
+				copyCVUBtn.addEventListener("click", function() {
+					const cvu = "0000003100008744584112";
+					const originalText = copyCVUBtn.innerHTML;
+					navigator.clipboard.writeText(cvu).then(() => {
+						copyCVUBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M17.707 4.293a1 1 0 010 1.414l-10 10a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L7 13.086l9.293-9.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Copiado';
+						revertBtn(copyCVUBtn, originalText);
+					}).catch(err => {
+						console.error('Error al copiar el CVU', err);
+					});
+				});
+			} else {
+				console.error("El botón copyCVUBtn no se encontró");
+			}
+
+			if (copyAliasMercadoPagoBtn) {
+				copyAliasMercadoPagoBtn.addEventListener("click", function() {
+					const aliasMercadoPago = "estudionovara.mp";
+					const originalText = copyAliasMercadoPagoBtn.innerHTML;
+					navigator.clipboard.writeText(aliasMercadoPago).then(() => {
+						copyAliasMercadoPagoBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M17.707 4.293a1 1 0 010 1.414l-10 10a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L7 13.086l9.293-9.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Copiado';
+						revertBtn(copyAliasMercadoPagoBtn, originalText);
+					}).catch(err => {
+						console.error('Error al copiar el alias de Mercado Pago', err);
+					});
+				});
+			} else {
+				console.error("El botón copyAliasMercadoPagoBtn no se encontró");
+			}
+		});
+	</script>
+</Layout>
+
+<style>
+</style>
